@@ -28,7 +28,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
 " Identify and close brackets
-Plugin "tpope/vim-surround"
+Plugin 'tpope/vim-surround'
 
 " Easy code comments
 Plugin 'preservim/nerdcommenter'
@@ -41,6 +41,9 @@ Plugin 'preservim/tagbar'
 
 " Auto-Complete
 Plugin 'Valloric/YouCompleteMe'
+
+" Set nord color theme
+Plugin 'arcticicestudio/nord-vim'
 " ************ Plugins End ************************
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -131,3 +134,6 @@ function! HasPaste()
     endif
     return ''
 endfunction
+
+" Set color theme
+colorscheme nord
