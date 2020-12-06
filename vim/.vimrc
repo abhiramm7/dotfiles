@@ -27,6 +27,20 @@ Plugin 'VundleVim/Vundle.vim'
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
+" Identify and close brackets
+Plugin "tpope/vim-surround"
+
+" Easy code comments
+Plugin 'preservim/nerdcommenter'
+
+" File explorer
+Plugin 'preservim/nerdtree'
+
+" Tag files
+Plugin 'preservim/tagbar'
+
+" Auto-Complete
+Plugin 'Valloric/YouCompleteMe'
 " ************ Plugins End ************************
 call vundle#end()            " required
 filetype plugin indent on    " required
