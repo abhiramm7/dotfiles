@@ -44,6 +44,13 @@ Plugin 'Valloric/YouCompleteMe'
 
 " Set nord color theme
 Plugin 'arcticicestudio/nord-vim'
+
+" Black code formatter
+Plugin 'ambv/black'
+
+" Sytax check
+Plugin 'vim-syntastic/syntastic'
+
 " ************ Plugins End ************************
 call vundle#end()            " required
 filetype plugin indent on    " required
