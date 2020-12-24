@@ -45,12 +45,11 @@ Plugin 'Valloric/YouCompleteMe'
 " Set nord color theme
 Plugin 'arcticicestudio/nord-vim'
 
-" Black code formatter
-Plugin 'ambv/black'
-
 " Sytax check
 Plugin 'vim-syntastic/syntastic'
 
+" Black 
+Plugin 'psf/black'
 " ************ Plugins End ************************
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -144,3 +143,16 @@ endfunction
 
 " Set color theme
 colorscheme nord
+
+" ycm window close after
+let g:ycm_autoclose_preview_window_after_completion=1
+
+" indentation
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
