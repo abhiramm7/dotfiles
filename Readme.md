@@ -11,7 +11,6 @@ I personally prefer IBM Plex (Mono) and Source Code Pro.
 ![font](./screenshots/ibm_plex.png)
 
 ## GNU-stow
-I use `stow` for maintaining my configuration files. It is available on `brew` for mac. 
-
+I use `GNU-stow` for managing my dotfiles. It links to the `.rc` files in the 
 
 ### Credits and useful tutorials. 

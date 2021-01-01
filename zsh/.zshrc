@@ -75,7 +75,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx python vi-mode)
+plugins=(git osx vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,3 +106,9 @@ alias p39="python3.9"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# zshrc virtualenv
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.9
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh

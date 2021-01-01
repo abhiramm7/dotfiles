@@ -50,6 +50,12 @@ Plugin 'vim-syntastic/syntastic'
 
 " Black 
 Plugin 'psf/black'
+
+" vimtex
+Plugin 'lervag/vimtex'
+
+" tags
+Plugin 'ludovicchabant/vim-gutentags'
 " ************ Plugins End ************************
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -156,3 +162,6 @@ au BufNewFile,BufRead *.py
     \ set expandtab
     \ set autoindent
     \ set fileformat=unix
+
+" latex 
+let g:vimtex_view_method = 'zathura'
