@@ -165,3 +165,8 @@ au BufNewFile,BufRead *.py
 
 " latex 
 let g:vimtex_view_method = 'zathura'
+" latex autocomplete with YCM
+if !exists('g:ycm_semantic_triggers')
+let g:ycm_semantic_triggers = {}
+endif
+au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
