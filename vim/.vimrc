@@ -56,6 +56,9 @@ Plugin 'lervag/vimtex'
 
 " tags
 Plugin 'ludovicchabant/vim-gutentags'
+
+" markdown toggle
+Plugin 'JamshedVesuna/vim-markdown-preview'
 " ************ Plugins End ************************
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -124,10 +127,6 @@ fun! CleanExtraSpaces()
     call setreg('/', old_query)
 endfun
 
-if has("autocmd")
-    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
-endif
-
 " Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
 
@@ -155,12 +154,12 @@ let g:ycm_autoclose_preview_window_after_completion=1
 
 " indentation
 au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
     \ set fileformat=unix
 
 " latex 
@@ -170,3 +169,6 @@ if !exists('g:ycm_semantic_triggers')
 let g:ycm_semantic_triggers = {}
 endif
 au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
+
+"makrdown github
+let vim_markdown_preview_github=1
