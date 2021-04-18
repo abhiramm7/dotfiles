@@ -51,11 +51,11 @@ Plugin 'vim-syntastic/syntastic'
 " Black 
 Plugin 'psf/black'
 
+" Auto Indent
+Plugin 'Vimjas/vim-python-pep8-indent'
+
 " vimtex
 Plugin 'lervag/vimtex'
-
-" tags
-Plugin 'ludovicchabant/vim-gutentags'
 
 " markdown toggle
 Plugin 'JamshedVesuna/vim-markdown-preview'
@@ -157,7 +157,6 @@ au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
-    \ set textwidth=79 |
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
@@ -172,3 +171,13 @@ au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
 
 "makrdown github
 let vim_markdown_preview_github=1
+
+let g:syntastic_python_checkers = ['pycodestyle']
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checker_args='--ignore=E501'
